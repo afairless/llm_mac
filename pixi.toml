@@ -1,0 +1,21 @@
+[workspace]
+channels = ["conda-forge"]
+name = "llm_coder"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.13.*"
+fastapi = ">=0.119.1,<0.120"
+pydantic = ">=2.12.3,<3"
+psutil = ">=7.1.1,<8"
+
+[pypi-dependencies]
+transformers = ">=4.57.1,<5"
+torch = { version = "*", index = "https://download.pytorch.org/whl/cpu" }
+torchvision = { version = "*", index = "https://download.pytorch.org/whl/cpu" }
+torchaudio = { version = "*", index = "https://download.pytorch.org/whl/cpu" }
+accelerate = ">=1.11.0, <2"
+
